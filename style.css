@@ -13,6 +13,12 @@ body {
     background-size: cover;
 }
 
+@media (max-width: 768px) {
+    .wallpaper {
+        background: url("/fundo-mobile.png") no-repeat center center fixed;
+    }
+}
+
 header {
     position: relative;
     text-align: center;
