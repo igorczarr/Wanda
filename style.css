@@ -7,7 +7,7 @@ body {
 
 .wallpaper {
     /* Adiciona a imagem de fundo diretamente no HTML */
-    background: url('fundo.png') no-repeat center center fixed;
+    background: url('fundo02.png') no-repeat center center fixed;
     background-size: cover;  /* Faz a imagem cobrir toda a tela */
     background-attachment: fixed;  /* Mantém o fundo fixo na rolagem */
     text-align: center;
@@ -35,8 +35,8 @@ header {
 
 .titulo {
     font-family: 'Vonca', sans-serif;
-    font-size: 36px;
-    color: #fff;
+    font-size: 27px;
+    color: #f8f8f8;
     margin-top: -10px;
 }
 
