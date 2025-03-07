@@ -15,7 +15,7 @@ body {
 
 @media (max-width: 768px) {
     .wallpaper {
-        background: url("/fundo-mobile.png") no-repeat center center fixed;
+        background: url("/fundo.png") no-repeat center center fixed;
     }
 }
 
