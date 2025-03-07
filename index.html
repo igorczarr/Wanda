@@ -4,14 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nutricionista Wanda</title>
-    
-    <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
-    
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Vonca&family=RetroFans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600&display=swap" rel="stylesheet">
-    
     <!-- Favicon -->
     <link rel="icon" href="img/Logotipo R Branco.png" sizes="16x16" type="image/png">
     <link rel="icon" href="img/Logotipo R Branco.png" sizes="32x32" type="image/png">
@@ -20,7 +15,6 @@
     <link rel="apple-touch-icon" href="img/Logotipo R Branco.png" sizes="180x180">
 </head>
 <body>
-
     <div class="wallpaper">
         <header>
             <div class="logo">
@@ -33,7 +27,6 @@
                 <p class="subheadline">Transformando sua alimentação, sua saúde e sua vida!</p>
             </div>
         </header>
-
         <section class="social-links">
             <a href="https://wa.me/seu-numero" class="social-icon">
                 <img src="img/whatsapp.png" alt="WhatsApp">
@@ -47,8 +40,7 @@
             <a href="https://t.me/seu-grupo" class="social-icon">
                 <img src="img/facebook.png" alt="Facebook">
             </a>
-        </section>        
-
+        </section>
         <section class="carousel">
             <div class="slides">
                 <div class="slide active">
@@ -70,7 +62,6 @@
                     </a>
                 </div>
             </div>
-        
             <!-- Indicadores dos slides -->
             <div class="carousel-indicators">
                 <span class="dot active" onclick="currentSlide(1)"></span>
@@ -78,52 +69,30 @@
                 <span class="dot" onclick="currentSlide(3)"></span>
             </div>
         </section>
-
+        <footer>
+            <img class="rodape" src="img/rodapé.png" alt="Rodapé">
+            <img class="logo" src="img/Logotipo H Branco.png" alt="Logotipo H Branco">
+            <p>© 2025 Todos os direitos reservados</p>
+        </footer>
+    </div>
     <script>
         let slideIndex = 0;
         let slideInterval;
-
         function showSlides(n) {
             let slides = document.querySelectorAll(".slide");
             let dots = document.querySelectorAll(".dot");
-
             if (n >= slides.length) { slideIndex = 0; }
             if (n < 0) { slideIndex = slides.length - 1; }
-
             slides.forEach(slide => slide.classList.remove("active"));
             dots.forEach(dot => dot.classList.remove("active"));
-
             slides[slideIndex].classList.add("active");
             dots[slideIndex].classList.add("active");
         }
-
         function currentSlide(n) {
             clearInterval(slideInterval);
             slideIndex = n - 1;
             showSlides(slideIndex);
             startAutoSlide();
         }
-
         function startAutoSlide() {
-            slideInterval = setInterval(() => {
-                slideIndex++;
-                showSlides(slideIndex);
-            }, 3000); // Troca de slides a cada 3 segundos
-        }
-
-        document.addEventListener("DOMContentLoaded", () => {
-            showSlides(slideIndex);
-            startAutoSlide();
-        });
-    </script>
-
-        <footer>
-            <img class="rodape" src="img/rodapé.png" alt="Rodapé">
-            <img class="logo" src="img/Logotipo H Branco.png" alt="Logotipo H Branco">
-            <p>© 2025 Todos os direitos reservados</p>
-        </footer>               
-
-    </div>
-
-</body>
-</html>
+            slideInterval =
