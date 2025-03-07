@@ -1,0 +1,215 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.wallpaper {
+    text-align: center;
+    padding: 20px;
+    min-height: 100vh;
+    background: url("../img/fundo.png") no-repeat center center fixed;
+    background-size: cover;
+}
+
+header {
+    position: relative;
+    text-align: center;
+}
+
+.logo img {
+    position: absolute;
+    top: -20px;
+    left: 10px;
+    width: 90px;
+}
+
+.perfil img {
+    width: 120px;
+    border-radius: 50%;
+    margin-top: 20px;
+}
+
+.titulo {
+    font-family: 'Vonca', sans-serif;
+    font-size: 36px;
+    color: #fff;
+    margin-top: -10px;
+}
+
+.subtitulo {
+    font-family: 'RetroFans', sans-serif;
+    color: #fff;
+    margin-top: -20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.subheadline {
+    font-size: 14px;
+    font-family: 'Sora', sans-serif;
+    color: #fff;
+    margin-top: -15px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 35px;
+
+}
+
+/* Contêiner de links sociais */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px; /* Espaçamento entre os ícones */
+    margin-top: 40px 0;
+    position: relative;
+    z-index: 1; /* Garante que o contêiner fique acima do fundo */
+}
+
+/* Retângulo translúcido acima do wallpaper e abaixo dos ícones */
+.social-links::before {
+    content: "";
+    position: absolute;
+    width: 80%; /* Ajusta a largura do retângulo */
+    height: 50px; /* Altura do retângulo */
+    background: rgba(255, 255, 255, 0.2); /* Cor translúcida */
+    border-radius: 30px; /* Bordas arredondadas */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centraliza o retângulo */
+    z-index: -1; /* Coloca o retângulo atrás dos ícones */
+}
+
+/* Ajusta o hover para funcionar corretamente */
+.social-icon img {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-icon {
+    position: relative;
+    z-index: 2;
+}
+
+/* Certifica-se de que o hover funcione corretamente */
+.social-icon:hover img {
+    transform: scale(1.2);
+}
+
+/* Contêiner de links */
+.links {
+    margin-top: 20px;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    margin-top: 40px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.8s ease-in-out; /* Transição suave */
+}
+
+.slide {
+    display: none;
+    width: 100%;
+    text-align: center;
+    margin-top: 60px;
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+
+.slide.active {
+    display: block;
+}
+
+.slide img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.slide p {
+    font-family: "Sora", sans-serif;
+    font-size: 16px;
+    text-decoration: bold;
+    margin-top: 10px;
+    COLOR: #c26828;
+}
+
+.carousel-indicators {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background 0.3s;
+    margin-bottom: 20px;
+}
+
+.dot.active {
+    width: 20px;
+    height: 10px;
+    background-color: #5e7153;
+    border-radius: 10px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: -20px;
+    padding: 20px;
+    position: relative;
+}
+
+footer img {
+    width: 390px; /* Ajuste conforme necessário */
+    height: auto;
+    display: block;
+    margin: 0;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%); /* Centra a imagem horizontalmente */
+
+}
+
+footer .logo {
+    max-width: 150px; /* Tamanho máximo do logotipo, ajuste conforme necessário */
+    width: 80%; /* Tamanho do logotipo em porcentagem, ajuste conforme necessário */
+    margin-top: 20px;
+}
+
+footer p {
+    font-family: "RetroFans", sans-serif;
+    font-size: 14px;
+    color: #f8f8f8;
+    margin-top: 60px;
+    margin-bottom: -15px;
+}
+footer p {
+    font-family: "Sora", sans-serif;
+    font-size: 12px;
+    color: #f8f8f8;
+    margin-top: 20px; /* Ajusta o espaço acima do parágrafo */
+    margin-bottom: 0; /* Garante que o parágrafo não tenha margem negativa */
+    position: relative;
+    z-index: 2; /* Coloca o parágrafo acima da imagem de fundo */
+}
